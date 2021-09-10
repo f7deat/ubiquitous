@@ -1,10 +1,14 @@
 {
     "en-US": {
         "HOME": "Home",
-        "ABOUT": "About"
+        "ABOUT": "About",
+        "SERVICES": "Services",
+        "CONTACT": "Contact"
     },
     "vi-VN": {
         "HOME": "Trang chủ",
-        "ABOUT": "Giới thiệu"
+        "ABOUT": "Giới thiệu",
+        "SERVICES": "Dịch vụ",
+        "CONTACT": "Liên hệ"
     }
 }
