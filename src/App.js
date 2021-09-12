@@ -1,12 +1,19 @@
+import CardService from './components/card-service';
 import Feature from './components/feature';
+import Footer from './components/footer';
 import Header from './components/header';
+import Services from './components/services';
 import Setting from './components/setting';
+import Statistic from './components/statistic';
+import Team from './components/team';
+import heroImg from './img/hero-img.png';
+import feature3 from './img/features-3.png';
 
 function App() {
   return (
-    <div className="container mx-auto">
+    <div>
       <Header />
-      <main>
+      <main className="container mx-auto">
         <section>
           <div className="md:flex items-center md:py-40">
             <div className="md:w-1/2 md:px-20">
@@ -26,25 +33,34 @@ function App() {
               </div>
             </div>
             <div className="md:w-1/2 p-10 md:px-20 text-center" data-aos="zoom-out">
-              <img src="https://www.laboontech.com/assets/img/hero-img.png" alt="banner" />
+              <img src={heroImg} alt="banner" />
             </div>
           </div>
         </section>
-        <section>
+        <section className="md:mb-20 mb-10">
           <div className="title text-blue-900 mb-10">Why Choose Us</div>
           <div className="md:flex">
-            <div className="w-1/3">
+            <div className="md:w-1/3">
               <div className="flex justify-center items-center" data-aos="fade-right">
-                <img src="https://www.laboontech.com/assets/img/features-3.png" alt="banner" style={{width: 350}} />
+                <img src={feature3} alt="banner" className="p-10" />
               </div>
             </div>
-            <div className="w-2/3 flex">
+            <div className="md:w-2/3 md:flex">
               <Feature/>
             </div>
           </div>
         </section>
+        <section className="md:mb-20 mb-10">
+          <div className="sub-title text-center">OUR SERVICES</div>
+          <div className="title text-blue-900 mb-10">We are known for our quality work</div>
+          <CardService />
+        </section>
+        <Statistic/>
+        <Services/>
+        <Team />
       </main>
       <Setting />
+      <Footer/>
     </div>
   );
 }
