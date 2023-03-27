@@ -5,8 +5,13 @@ import feature3 from '../img/features-3.png';
 import Services from '../components/services';
 import Feature from '../components/feature';
 import CardService from '../components/card-service';
+import useIntl from '../utils/intl';
+import i18n from '../i18n.json';
 
 export default function Home() {
+
+    const intl = useIntl();
+
     return (
         <div>
             <section>
@@ -20,7 +25,7 @@ export default function Home() {
                         </div>
                         <div className="flex justify-center md:justify-start">
                             <button className="bg-blue-600 hover:bg-blue-700 rounded py-3 px-10 text-white my-4 flex items-center font-bold shadow-blue" data-aos="fade-up">
-                                <span className="mr-2">Get Started</span>
+                                <span className="mr-2">{i18n[intl].GET_STARTED}</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                                 </svg>

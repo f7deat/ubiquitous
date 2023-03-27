@@ -3,12 +3,14 @@
         "HOME": "Home",
         "ABOUT": "About",
         "SERVICES": "Services",
-        "CONTACT": "Contact"
+        "CONTACT": "Contact",
+        "GET_STARTED": "Get Started"
     },
     "vi-VN": {
         "HOME": "Trang chủ",
         "ABOUT": "Giới thiệu",
         "SERVICES": "Dịch vụ",
-        "CONTACT": "Liên hệ"
+        "CONTACT": "Liên hệ",
+        "GET_STARTED": "Bắt đầu"
     }
 }

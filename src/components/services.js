@@ -1,20 +1,12 @@
 import i18n from '../i18n.json';
-import { useEffect, useState } from 'react';
 import features from '../img/features.png';
 
 export default function Services() {
 
-  const [lang, setLang] = useState('en-US')
-
-  useEffect(() => {
-    let langStorage = sessionStorage.getItem('lang');
-    if (langStorage) {
-      setLang(langStorage)
-    }
-  }, [])
+  const lang = localStorage.getItem('lang') || 'vi-VN';
 
   return (
-    <section className="md:mb-20 mb-10 services">
+    <section className="md:mb-20 mb-10 services" id="service">
       <div className="sub-title text-center">{i18n[lang].SERVICES}</div>
       <div className="title text-blue-900 mb-10">We provide best quality services to our Client</div>
       <div className="md:flex">

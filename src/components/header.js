@@ -2,17 +2,14 @@ import logo from '../img/def-cms.png';
 import i18n from '../i18n.json';
 import { useEffect, useState } from 'react';
 import AOS from 'aos';
+import useIntl from '../utils/intl';
 
 export default function Header() {
 
-    const [lang, setLang] = useState('en-US')
     const [offset, setOffset] = useState(0);
+    const intl = useIntl();
 
     useEffect(() => {
-        let langStorage = sessionStorage.getItem('lang');
-        if (langStorage) {
-            setLang(langStorage)
-        }
         AOS.init({
             duration: 2000
         });
@@ -32,11 +29,11 @@ export default function Header() {
                 </div>
                 <div className="menu hidden md:flex items-center">
                     <ul className="list-none flex font-bold mr-3">
-                        <li className="text-blue-600 px-4 cursor-pointer hover:text-blue-600">{i18n[lang].HOME}</li>
-                        <li className="text-blue-800 px-4 cursor-pointer hover:text-blue-600">{i18n[lang].ABOUT}</li>
-                        <li className="text-blue-800 px-4 cursor-pointer hover:text-blue-600">{i18n[lang].SERVICES}</li>
+                        <li className="text-blue-600 px-4 cursor-pointer hover:text-blue-600">{i18n[intl].HOME}</li>
+                        <li className="text-blue-800 px-4 cursor-pointer hover:text-blue-600">{i18n[intl].ABOUT}</li>
+                        <li className="text-blue-800 px-4 cursor-pointer hover:text-blue-600">{i18n[intl].SERVICES}</li>
                         <li className="text-blue-800 px-4 cursor-pointer hover:text-blue-600">Portfolio</li>
-                        <li className="text-blue-800 px-4 cursor-pointer hover:text-blue-600">{i18n[lang].CONTACT}</li>
+                        <li className="text-blue-800 px-4 cursor-pointer hover:text-blue-600">{i18n[intl].CONTACT}</li>
                         <li className="text-blue-800 px-4 cursor-pointer hover:text-blue-600">
                             <a href="https://github.com/orgs/def-zone/people" rel="noreferrer" target="_blank">Team</a>
                         </li>

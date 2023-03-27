@@ -1,10 +1,11 @@
 export default function Setting() {
+
     const handleChangeLanguage = () => {
-        let lang = sessionStorage.getItem('lang');
+        let lang = localStorage.getItem('lang');
         if (lang === 'vi-VN' || !lang) {
-            sessionStorage.setItem('lang', 'en-US');
+            localStorage.setItem('lang', 'en-US');
         } else {
-            sessionStorage.setItem('lang', 'vi-VN');
+            localStorage.setItem('lang', 'vi-VN');
         }
         window.location.reload();
     }
