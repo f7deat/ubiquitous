@@ -6,7 +6,7 @@ export default function Statistic() {
     const [totalProject, setTotalProject] = useState(0)
 
     useEffect(() => {
-        axios.get(`https://api.github.com/orgs/def-zone`).then(response => {
+        axios.get(`https://api.github.com/users/f7deat`).then(response => {
             setTotalProject(response.data.public_repos)
         })
     }, [])

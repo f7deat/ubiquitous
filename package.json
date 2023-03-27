@@ -1,6 +1,5 @@
 {
-  "homepage": "https://def-zone.github.io/cms",
-  "name": "def-cms",
+  "name": "ubiquitous",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
